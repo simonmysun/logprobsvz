@@ -9,7 +9,7 @@ It is useful for debugging and understanding the model's behavior.
 
 ## Usage
 
-Navigate to [LogprobsViz](https://simonmysun.github.io/logprobsvz/).
+Navigate to [LogprobsVz](https://simonmysun.github.io/logprobsvz/).
 
 The parameters are stored in your browser's LocalStorage. Click "Clear" button in case you don't want to.
 
