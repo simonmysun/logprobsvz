@@ -13,7 +13,7 @@ Navigate to [LogprobsVz](https://simonmysun.github.io/logprobsvz/).
 
 The parameters are stored in your browser's LocalStorage. Click "Clear" button in case you don't want to.
 
-A common usage is to tick the "logprobs" checkbox and enter a number of 1 to 20 in "top_logprobs. 
+A common usage is to tick the "logprobs" checkbox and enter a number of 1 to 20 in "top_logprobs". 
 Enter your prompt and click "Complete". 
 The log probabilities will be displayed below. 
 Mouse over the tokens to see the log probabilities of candidates. 
