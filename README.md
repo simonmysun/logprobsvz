@@ -1,4 +1,6 @@
-# LogprobsViz
+# logprobsvz
+
+[Check it out live!](https://simonmysun.github.io/logprobsvz/)
 
 This is a simple tool to visualize the [log probabilities](https://cookbook.openai.com/examples/using_logprobs) of OpenAI GPT completions. 
 It is useful for debugging and understanding the model's behavior. 
