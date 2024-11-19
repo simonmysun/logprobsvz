@@ -72,6 +72,9 @@ function complete(state, resultDom, logger, prompt) {
               completionDom.appendChild(tokenDom);
             }
           }
+          if (content.usage) {
+            logger.info(`success. usage{prompt_tokens=${content.usage.prompt_tokens},completion_tokens=${content.usage.completion_tokens},total_tokens=${content.usage.total_tokens}}`);
+          }
         }
         return done ? undefined : reader.read().then(processResult);
       });
