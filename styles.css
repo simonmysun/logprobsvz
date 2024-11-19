@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.input-section {
+  margin-bottom: 0;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.button-wrapper button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.results-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.config-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 15px;
+  align-items: center;
+}
+
+.config-section label .label-text {
+  text-align: right;
+  padding-right: 10px;
+  position: relative;
+}
+
+.config-section label {
+  display: contents;
+}
+
+.config-section label .label-text .label-desc {
+  visibility: hidden;
+  text-align: left;
+  background-color: #eee;
+  width: 20em;
+  padding: 0 1em;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.config-section label .label-text:hover .label-desc {
+  visibility: visible;
+}
+
+.config-section input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.config-section input[type="checkbox"] {
+  width: auto;
+  height: 36px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.config-section .label-text {
+  grid-column: 1;
+}
+
+.config-section .input-wrapper {
+  grid-column: 2;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.config-section label {}
+
+.completion {
+  background: white;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  margin: 1em auto;
+  font-family: monospace;
+  word-break: break-word;
+  word-wrap: normal;
+  white-space: break-spaces;
+}
+
+.completion::before {
+  content: "Completion";
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 0.2em;
+  margin-right: 1ch;
+  color: #777;
+  display: inline;
+}
+
+.completion .token {
+  outline: 1px solid #ccc;
+  position: relative;
+}
+
+.token-with-logprobs {
+  background: #44acab;
+  background-image: linear-gradient(0deg, #ad8fd4, #887ddc, #6986e7, #368ce1, #24aad8, #1ac7c2, #1ddea3, #30ee83, #52f667, #7ef658, #7ef658);
+  background-size: 100% 100000%;
+  background-origin: 0 0;
+  background-position-y: 0%;
+}
+
+.token .logprobs {
+  visibility: hidden;
+  text-align: left;
+  background-color: #eee;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.token:hover .logprobs {
+  visibility: visible;
+}
+
+.token .logprobs {
+  word-break: keep-all;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+#logs-wrapper {
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.log-debug {
+  background: #fff;
+  outline: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1px 3px;
+}
+
+.log-info {
+  background: rgb(245, 203, 50);
+  outline: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1px 3px;
+}
+
+.log-error {
+  background: rgb(245, 50, 50);
+  outline: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1px 3px;
+}

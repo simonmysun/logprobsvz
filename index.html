@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT LogProbs Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>GPT LogProbs Visualizer</h1>
+      <div class="main-content">
+        <div class="input-section">
+          <p>
+            This is a simple tool to visualize the <a href="https://cookbook.openai.com/examples/using_logprobs"
+              target="_blank">log
+              probabilities</a> of OpenAI GPT completions. It is useful for
+            debugging and understanding the model's behavior.
+          </p>
+          <p>The parameters are stored in your browser's LocalStorage. Click <button id="clear-config">Clear</button> in
+            case you don't want to.
+          </p>
+          <p>
+            A common usage is to tick the "logprobs" checkbox and enter a number of 1 to 20 in "top_logprobs. Enter your
+            prompt and click "Complete". The log probabilities will be displayed below. Mouse over the tokens to see the
+            log probabilities of candidates. Enable "stream" to see result in real-time.
+          </p>
+          <p>
+            Other parameters are not fully tested. Use them at your own risk. "n" > 1 is known not supported. Text input
+            will be first attempted to be parsed with JSON. Mouse over the parameter names to see the descriptions.
+          </p>
+          <p>In case anything goes wrong, check your console and contact me at <a
+              href="mailto:mail@maoyin.eu">mail@maoyin.eu</a> or try fixing it yourself on <a
+              href="https://github.com/simonmysun/logprobsvz">GitHub</a>.
+          </p>
+          <div class="config-section">
+            <!--parameters-->
+          </div>
+        </div>
+        <div class="results-section">
+          <div id="prompt-wrapper">
+            <textarea id="prompt" placeholder="Enter your prompt here..."></textarea>
+          </div>
+          <div class="button-wrapper">
+            <button id="complete">Complete</button>
+          </div>
+          <div id="logprobs-wrapper"></div>
+          <div id="logs-wrapper"></div>
+        </div>
+      </div>
+    </div>
+    <script src="completion.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
