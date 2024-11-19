@@ -22,17 +22,17 @@ let params = [
   // {
   //   "name": "messages",
   //   "type": "array",
-  //   "desc": "<div class=\"markdown-content\"><p>A list of messages comprising the conversation so far. Depending on the\n<a href=\"/docs/models\">model</a> you use, different message types (modalities) are\nsupported, like <a href=\"/docs/guides/text-generation\">text</a>,\n<a href=\"/docs/guides/vision\">images</a>, and <a href=\"/docs/guides/audio\">audio</a>.</p></div>"
+  //   "desc": "<div class=\"markdown-content\"><p>A list of messages comprising the conversation so far. Depending on the\n<a href=\"https://platform.openai.com/docs/models\">model</a> you use, different message types (modalities) are\nsupported, like <a href=\"https://platform.openai.com/docs/guides/text-generation\">text</a>,\n<a href=\"https://platform.openai.com/docs/guides/vision\">images</a>, and <a href=\"https://platform.openai.com/docs/guides/audio\">audio</a>.</p></div>"
   // },
   {
     "name": "model",
     "type": "string",
-    "desc": "<div class=\"markdown-content\"><p>ID of the model to use. See the <a href=\"/docs/models#model-endpoint-compatibility\">model endpoint compatibility</a> table for details on which models work with the Chat API.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>ID of the model to use. See the <a href=\"https://platform.openai.com/docs/models#model-endpoint-compatibility\">model endpoint compatibility</a> table for details on which models work with the Chat API.</p></div>"
   },
   {
     "name": "store",
     "type": "boolean or null",
-    "desc": "<div class=\"markdown-content\"><p>Whether or not to store the output of this chat completion request\nfor use in our <a href=\"/docs/guides/distillation\">model distillation</a> or <a href=\"/docs/guides/evals\">evals</a> products.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Whether or not to store the output of this chat completion request\nfor use in our <a href=\"https://platform.openai.com/docs/guides/distillation\">model distillation</a> or <a href=\"https://platform.openai.com/docs/guides/evals\">evals</a> products.</p></div>"
   },
   {
     "name": "metadata",
@@ -42,7 +42,7 @@ let params = [
   {
     "name": "frequency_penalty",
     "type": "number or null",
-    "desc": "<div class=\"markdown-content\"><p>Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</p>\n<p><a href=\"/docs/guides/text-generation\">See more information about frequency and presence penalties.</a></p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</p>\n<p><a href=\"https://platform.openai.com/docs/guides/text-generation\">See more information about frequency and presence penalties.</a></p></div>"
   },
   {
     "name": "logit_bias",
@@ -62,12 +62,12 @@ let params = [
   {
     "name": "max_tokens",
     "type": "integer or null",
-    "desc": "<div class=\"markdown-content\"><p>The maximum number of <a href=\"/tokenizer\">tokens</a> that can be generated in the chat completion. This value can be used to control <a href=\"https://openai.com/api/pricing/\" target=\"_blank\" rel=\"noopener noreferrer\">costs</a> for text generated via API.</p>\n<p>This value is now deprecated in favor of <code>max_completion_tokens</code>, and is not compatible with <a href=\"/docs/guides/reasoning\">o1 series models</a>.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>The maximum number of <a href=\"https://platform.openai.com/tokenizer\">tokens</a> that can be generated in the chat completion. This value can be used to control <a href=\"https://openai.com/api/pricing/\" target=\"_blank\" rel=\"noopener noreferrer\">costs</a> for text generated via API.</p>\n<p>This value is now deprecated in favor of <code>max_completion_tokens</code>, and is not compatible with <a href=\"https://platform.openai.com/docs/guides/reasoning\">o1 series models</a>.</p></div>"
   },
   {
     "name": "max_completion_tokens",
     "type": "integer or null",
-    "desc": "<div class=\"markdown-content\"><p>An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and <a href=\"/docs/guides/reasoning\">reasoning tokens</a>.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and <a href=\"https://platform.openai.com/docs/guides/reasoning\">reasoning tokens</a>.</p></div>"
   },
   {
     "name": "n",
@@ -77,27 +77,27 @@ let params = [
   {
     "name": "modalities",
     "type": "array or null",
-    "desc": "<div class=\"markdown-content\"><p>Output types that you would like the model to generate for this request.\nMost models are capable of generating text, which is the default:</p>\n<p><code>[\"text\"]</code></p>\n<p>The <code>gpt-4o-audio-preview</code> model can also be used to <a href=\"/docs/guides/audio\">generate audio</a>. To\nrequest that this model generate both text and audio responses, you can\nuse:</p>\n<p><code>[\"text\", \"audio\"]</code></p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Output types that you would like the model to generate for this request.\nMost models are capable of generating text, which is the default:</p>\n<p><code>[\"text\"]</code></p>\n<p>The <code>gpt-4o-audio-preview</code> model can also be used to <a href=\"https://platform.openai.com/docs/guides/audio\">generate audio</a>. To\nrequest that this model generate both text and audio responses, you can\nuse:</p>\n<p><code>[\"text\", \"audio\"]</code></p></div>"
   },
   {
     "name": "prediction",
     "type": "object",
-    "desc": "<div class=\"markdown-content\"><p>Configuration for a <a href=\"/docs/guides/predicted-outputs\">Predicted Output</a>,\nwhich can greatly improve response times when large parts of the model\nresponse are known ahead of time. This is most common when you are\nregenerating a file with only minor changes to most of the content.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Configuration for a <a href=\"https://platform.openai.com/docs/guides/predicted-outputs\">Predicted Output</a>,\nwhich can greatly improve response times when large parts of the model\nresponse are known ahead of time. This is most common when you are\nregenerating a file with only minor changes to most of the content.</p></div>"
   },
   {
     "name": "audio",
     "type": "object or null",
-    "desc": "<div class=\"markdown-content\"><p>Parameters for audio output. Required when audio output is requested with\n<code>modalities: [\"audio\"]</code>. <a href=\"/docs/guides/audio\">Learn more</a>.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Parameters for audio output. Required when audio output is requested with\n<code>modalities: [\"audio\"]</code>. <a href=\"https://platform.openai.com/docs/guides/audio\">Learn more</a>.</p></div>"
   },
   {
     "name": "presence_penalty",
     "type": "number or null",
-    "desc": "<div class=\"markdown-content\"><p>Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.</p>\n<p><a href=\"/docs/guides/text-generation\">See more information about frequency and presence penalties.</a></p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.</p>\n<p><a href=\"https://platform.openai.com/docs/guides/text-generation\">See more information about frequency and presence penalties.</a></p></div>"
   },
   {
     "name": "response_format",
     "type": "object",
-    "desc": "<div class=\"markdown-content\"><p>An object specifying the format that the model must output. Compatible with <a href=\"/docs/models#gpt-4o\">GPT-4o</a>, <a href=\"/docs/models#gpt-4o-mini\">GPT-4o mini</a>, <a href=\"/docs/models#gpt-4-turbo-and-gpt-4\">GPT-4 Turbo</a> and all GPT-3.5 Turbo models newer than <code>gpt-3.5-turbo-1106</code>.</p>\n<p>Setting to <code>{ \"type\": \"json_schema\", \"json_schema\": {...} }</code> enables Structured Outputs which ensures the model will match your supplied JSON schema. Learn more in the <a href=\"/docs/guides/structured-outputs\">Structured Outputs guide</a>.</p>\n<p>Setting to <code>{ \"type\": \"json_object\" }</code> enables JSON mode, which ensures the message the model generates is valid JSON.</p>\n<p><strong>Important:</strong> when using JSON mode, you <strong>must</strong> also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if <code>finish_reason=\"length\"</code>, which indicates the generation exceeded <code>max_tokens</code> or the conversation exceeded the max context length.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>An object specifying the format that the model must output. Compatible with <a href=\"https://platform.openai.com/docs/models#gpt-4o\">GPT-4o</a>, <a href=\"https://platform.openai.com/docs/models#gpt-4o-mini\">GPT-4o mini</a>, <a href=\"https://platform.openai.com/docs/models#gpt-4-turbo-and-gpt-4\">GPT-4 Turbo</a> and all GPT-3.5 Turbo models newer than <code>gpt-3.5-turbo-1106</code>.</p>\n<p>Setting to <code>{ \"type\": \"json_schema\", \"json_schema\": {...} }</code> enables Structured Outputs which ensures the model will match your supplied JSON schema. Learn more in the <a href=\"https://platform.openai.com/docs/guides/structured-outputs\">Structured Outputs guide</a>.</p>\n<p>Setting to <code>{ \"type\": \"json_object\" }</code> enables JSON mode, which ensures the message the model generates is valid JSON.</p>\n<p><strong>Important:</strong> when using JSON mode, you <strong>must</strong> also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if <code>finish_reason=\"length\"</code>, which indicates the generation exceeded <code>max_tokens</code> or the conversation exceeded the max context length.</p></div>"
   },
   {
     "name": "seed",
@@ -147,12 +147,12 @@ let params = [
   {
     "name": "parallel_tool_calls",
     "type": "boolean",
-    "desc": "<div class=\"markdown-content\"><p>Whether to enable <a href=\"/docs/guides/function-calling#configuring-parallel-function-calling\">parallel function calling</a> during tool use.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>Whether to enable <a href=\"https://platform.openai.com/docs/guides/function-calling#configuring-parallel-function-calling\">parallel function calling</a> during tool use.</p></div>"
   },
   {
     "name": "user",
     "type": "string",
-    "desc": "<div class=\"markdown-content\"><p>A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href=\"/docs/guides/safety-best-practices#end-user-ids\">Learn more</a>.</p></div>"
+    "desc": "<div class=\"markdown-content\"><p>A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href=\"https://platform.openai.com/docs/guides/safety-best-practices#end-user-ids\">Learn more</a>.</p></div>"
   },
   {
     "name": "function_call",
